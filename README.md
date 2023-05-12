@@ -12,6 +12,11 @@ This app is divided into three sections.They are as follows
     * Questions with correct answer and chosen answer.
     * Restart Quiz button.
 
+# Here is quick demo of the app:
+
+https://github.com/TeniG/FlutterQuizApp/assets/43024245/795d8e24-ac9c-47d1-93e7-ce0416d29dd2
+
+
 Following are dart concepts and flutter widgets used in this project.
 
 ## Darts Concepts :
