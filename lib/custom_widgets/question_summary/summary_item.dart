@@ -33,18 +33,31 @@ class SummaryItem extends StatelessWidget {
                 const SizedBox(
                   height: 2,
                 ),
-                StyledText(
-                  text: itemData['user_answer'] as String,
-                  size: 18,
-                  color: const Color.fromARGB(255, 244, 162, 170),
-                  alignment: TextAlign.left ,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: StyledText(
+                        text: "${itemData['user_answer'] as String}",
+                        size: 18,
+                        color: const Color.fromARGB(255, 244, 162, 170),
+                        alignment: TextAlign.left,
+                      ),
+                    ),
+                    (isCorrectAnswer)? const Icon(
+                      Icons.check_outlined,
+                      color: Colors.green,
+                    ): const Icon(
+                      Icons.close,
+                      color: Colors.pink,
+                    ),
+                  ],
                 ),
-            
                 const SizedBox(
                   height: 2,
                 ),
                 Text(
-                  itemData['correct_answer'] as String,
+                  "${itemData['correct_answer'] as String}",
                   style: GoogleFonts.roboto(
                     color: Color.fromARGB(255, 182, 244, 197),
                     fontSize: 18,
